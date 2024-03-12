@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0; 
+}
+body{
+    font-family:"Poppins",sans-serif;
+}
+/* first use display flex  */
+:root{
+--red:#d01c28;
+--grey:#2e2e2e;
+}
+button{
+    all: unset;/*sari pehele ki css ko hata dega joh default html se atti hai*/
+    padding: 6px 16px;
+    background-color:var(--red);
+    height: 32px;
+    color: white;
+    font-weight: 500;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1280px;/* 3no ko side se equally margin mile */
+}
+nav{
+    display: flex;
+    justify-content: space-between; /*3no ke beech me space dene ke liye*/
+    
+    height: 72px;
+
+    align-items: center; /* universal tag me m0 karne ke badd sabh upar chale jaye ge toh unhe neche lane ke liye we use align-items  and yeh ek display flex wali property hai*/
+    
+
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    /* menu and baki sabh me gap dene ke liye we use gap */
+    gap:24px
+
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    height: calc(100vh -72); /*try with 100vh only ........ humne 72 px minus kardiya navagation ka scroll behaviour hatane ke liye*/
+}
+.hero h1 {
+    font-weight: 800;
+    font-size: 108px;
+    line-height: 102px; /*important*/
+}
+.hero p{
+    font-weight:600 ;
+    color: var(--grey);
+    max-width: 400px;
+}
+.hero-button {
+    display: flex;
+  gap: 40px;
+}
+.second-btn{
+    background: transparent;
+    color: var(--grey);
+    border: 1px solid var(--grey);
+    transition: 0.5s;
+}
+.second-btn:hover{
+    background: var(--red);
+    color: white;
+   transition: 0.5s;
+}
+.shopping p {
+
+font-size: 14px;
+margin-bottom: 9px;
+}
+.images {
+    display: flex;
+    gap: 16px;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.hero-button button {
+    font-size: 24px;
+}
